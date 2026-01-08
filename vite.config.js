@@ -12,9 +12,10 @@ export default defineConfig({
         name: 'Convocatoria Arreglo Floral',
         short_name: 'Convocatoria',
         description: 'Aplicación para gestionar convocatorias de arreglo floral',
-        theme_color: '#D97706',
-        background_color: '#FFFBEB',
+        theme_color: '#0F172A',
+        background_color: '#0F172A',
         display: 'standalone',
+        orientation: 'portrait',
         icons: [
           {
             src: 'pwa-192x192.png',
