@@ -862,7 +862,7 @@ const App = () => {
                 >
                   <h1
                     style={{
-                      fontSize: "19px",
+                      fontSize: "20px",
                       fontWeight: 900,
                       margin: "0 0 4px 0",
                       letterSpacing: "6px",
@@ -873,15 +873,19 @@ const App = () => {
                   </h1>
                   <p
                     style={{
-                      fontSize: "14px",
+                      fontSize: "15px",
                       margin: 0,
                       color: "#000",
                       lineHeight: 1.3,
+                      fontStyle: "italic",
                     }}
                   >
                     Cada uno dé como propuso en su corazón: no con tristeza, ni
-                    por necesidad, porque Dios ama al dador alegre. -Corintios
-                    9:7
+                    por necesidad, porque Dios ama al dador alegre.
+                    <br />
+                    <span style={{ fontWeight: "bold" }}>
+                      — 2 Corintios 9:7
+                    </span>
                   </p>
                 </div>
 
@@ -914,7 +918,7 @@ const App = () => {
                             padding: "2.5px",
                             border: "1px solid #000",
                             borderBottom: "none",
-                            fontSize: "17px",
+                            fontSize: "18px",
                             textTransform: "uppercase",
                             letterSpacing: "1px",
                           }}
@@ -939,7 +943,7 @@ const App = () => {
                                   textAlign: "center",
                                   verticalAlign: "middle",
                                   fontWeight: "bold",
-                                  fontSize: "15px",
+                                  fontSize: "16px",
                                   lineHeight: "1.2", // Esto evita que el texto se corte verticalmente
                                 }}
                               >
@@ -952,7 +956,7 @@ const App = () => {
                                   textAlign: "center",
                                   verticalAlign: "middle",
                                   fontWeight: "bold",
-                                  fontSize: "15px",
+                                  fontSize: "16px",
                                   width: "55px",
                                   lineHeight: "1.2", // Esto evita que el texto se corte verticalmente
                                 }}
@@ -978,7 +982,7 @@ const App = () => {
                                         padding: "3px 4px 5px 4px",
                                         color: family ? "#000" : "#666",
                                         fontStyle: family ? "normal" : "italic",
-                                        fontSize: "15px",
+                                        fontSize: "16px",
                                         // height: "18px",
                                       }}
                                     >
@@ -990,7 +994,7 @@ const App = () => {
                                         padding: "1px 4px 5px 4px",
                                         textAlign: "center",
                                         fontWeight: "bold",
-                                        fontSize: "15px",
+                                        fontSize: "16px",
                                       }}
                                     >
                                       {day}
