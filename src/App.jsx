@@ -176,12 +176,13 @@ const App = () => {
 
   const downloadPDF = () => {
     const opt = {
-      margin: 5, // Margen estrecho para usar toda la hoja
+      margin: [5, 5, 5, 5],
       filename: `convocatoria-floral-${YEAR}.pdf`,
       image: { type: "jpeg", quality: 0.98 },
       html2canvas: {
-        scale: 2, // Alta resolución
-        useCORS: true,
+        scale: 2, // Mantiene alta resolución (nitidez)
+        useCORS: true, // Permite cargar imágenes externas si las hubiera
+        scrollY: 0, // CRUCIAL: Evita que el PDF salga desplazado hacia arriba/abajo
         letterRendering: true,
       },
       jsPDF: { unit: "mm", format: "a4", orientation: "portrait" },
@@ -855,13 +856,13 @@ const App = () => {
                   style={{
                     textAlign: "center",
                     border: "2px solid #000",
-                    padding: "6px 9px",
-                    marginBottom: "10px",
+                    padding: "5px",
+                    marginBottom: "8px",
                   }}
                 >
                   <h1
                     style={{
-                      fontSize: "18px",
+                      fontSize: "19px",
                       fontWeight: 900,
                       margin: "0 0 4px 0",
                       letterSpacing: "6px",
@@ -872,7 +873,7 @@ const App = () => {
                   </h1>
                   <p
                     style={{
-                      fontSize: "12px",
+                      fontSize: "14px",
                       margin: 0,
                       color: "#000",
                       lineHeight: 1.3,
@@ -889,7 +890,7 @@ const App = () => {
                   style={{
                     display: "grid",
                     gridTemplateColumns: "1fr 1fr",
-                    gap: "6px",
+                    gap: "5px",
                     columnGap: "10px",
                   }}
                 >
@@ -910,10 +911,10 @@ const App = () => {
                             color: "#000",
                             fontWeight: "bold",
                             textAlign: "center",
-                            padding: "3px",
+                            padding: "2.5px",
                             border: "1px solid #000",
                             borderBottom: "none",
-                            fontSize: "12px",
+                            fontSize: "17px",
                             textTransform: "uppercase",
                             letterSpacing: "1px",
                           }}
@@ -934,11 +935,11 @@ const App = () => {
                               <th
                                 style={{
                                   border: "1px solid #000",
-                                  padding: "4px 5px 5px 5px",
+                                  padding: "2px 4px 5px 5px",
                                   textAlign: "center",
                                   verticalAlign: "middle",
                                   fontWeight: "bold",
-                                  fontSize: "10px",
+                                  fontSize: "15px",
                                   lineHeight: "1.2", // Esto evita que el texto se corte verticalmente
                                 }}
                               >
@@ -947,11 +948,11 @@ const App = () => {
                               <th
                                 style={{
                                   border: "1px solid #000",
-                                  padding: "4px 5px 5px 5px",
+                                  padding: "2px 4px 5px 5px",
                                   textAlign: "center",
                                   verticalAlign: "middle",
                                   fontWeight: "bold",
-                                  fontSize: "10px",
+                                  fontSize: "15px",
                                   width: "55px",
                                   lineHeight: "1.2", // Esto evita que el texto se corte verticalmente
                                 }}
@@ -974,10 +975,11 @@ const App = () => {
                                     <td
                                       style={{
                                         border: "1px solid #000",
-                                        padding: "3px 5px",
+                                        padding: "3px 4px 5px 4px",
                                         color: family ? "#000" : "#666",
                                         fontStyle: family ? "normal" : "italic",
-                                        fontSize: "11px",
+                                        fontSize: "15px",
+                                        // height: "18px",
                                       }}
                                     >
                                       {family ? family.name : "Disponible"}
@@ -985,10 +987,10 @@ const App = () => {
                                     <td
                                       style={{
                                         border: "1px solid #000",
-                                        padding: "3px 5px",
+                                        padding: "1px 4px 5px 4px",
                                         textAlign: "center",
                                         fontWeight: "bold",
-                                        fontSize: "11px",
+                                        fontSize: "15px",
                                       }}
                                     >
                                       {day}
